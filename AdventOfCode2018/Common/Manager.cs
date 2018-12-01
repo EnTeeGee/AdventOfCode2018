@@ -31,7 +31,7 @@ namespace AdventOfCode2018.Common
             {
                 if (string.IsNullOrWhiteSpace(enteredOption))
                 {
-                    var latestSolution = solutions.OrderByDescending(it => it.Day).ThenBy(it => it.Problem).First();
+                    var latestSolution = solutions.OrderByDescending(it => it.Day).ThenByDescending(it => it.Problem).First();
                     this.RunInstanceOfSolution(latestSolution);
                 }
                 else
@@ -82,7 +82,7 @@ namespace AdventOfCode2018.Common
                 var result = solutionMapping.Method.Invoke(instance, new object[] { input });
                 Console.WriteLine($"Solution for day {solutionMapping.Day}, problem {solutionMapping.Problem}:");
                 Console.WriteLine(result);
-                this.WriteDataToClipboard(result.ToString());
+                this.WriteDataToClipboard(result?.ToString() ?? string.Empty);
                 Console.WriteLine("Result copied to clipboard.");
             }
             catch (Exception e)
