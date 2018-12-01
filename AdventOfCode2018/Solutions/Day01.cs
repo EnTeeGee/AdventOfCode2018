@@ -29,7 +29,7 @@ namespace AdventOfCode2018.Solutions
             // This is messy and could be done neater with an endless enumerable, but will work for now.
             var index = 0;
             var current = 0;
-            var seenValues = new List<int>();
+            var seenValues = new HashSet<int>();
             while (true)
             {
                 current += items[index];
