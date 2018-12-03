@@ -41,7 +41,6 @@ namespace AdventOfCode2018.Common
                     {
                         var day = Convert.ToInt32(inputs[0]);
                         var solution = Convert.ToInt32(inputs[1]);
-                        var expectedName = $"Day{day: D2}Problem{solution}";
 
                         this.RunInstanceOfSolution(solutions.Single(it => it.Day == day && it.Problem == solution));
                     }
@@ -51,7 +50,7 @@ namespace AdventOfCode2018.Common
                     }
                 }
 
-                Console.ReadLine();
+                enteredOption = Console.ReadLine();
             }
         }
 
