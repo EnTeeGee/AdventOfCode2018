@@ -43,7 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\Dumper.cs" />
     <Compile Include="Common\Manager.cs" />
+    <Compile Include="Common\Mapper.cs" />
     <Compile Include="Common\SolutionAttribute.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -64,6 +66,7 @@
     <Compile Include="Solutions\Day15.cs" />
     <Compile Include="Solutions\Day16.cs" />
     <Compile Include="Solutions\Day17.cs" />
+    <Compile Include="Solutions\Day18.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
