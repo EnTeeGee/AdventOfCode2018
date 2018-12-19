@@ -8,10 +8,14 @@ namespace AdventOfCode2018.Common
 {
     class Mapper
     {
+        public static string[] ToLines(string input)
+        {
+            return input.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
+        }
+
         public static T[,] ConvertToMap<T>(string input, Func<char, T> converter)
         {
-            var lines = input.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries).ToArray();
-
+            var lines = ToLines(input);
             var map = new T[lines[0].Length, lines.Length];
 
             for(var i = 0; i < lines.Length; i++)

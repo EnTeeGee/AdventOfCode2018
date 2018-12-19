@@ -1,0 +1,67 @@
+﻿addi 5 16 5 Jump to ln 18
+seti 1 0 3	resets reg 3 to 1
+seti 1 2 2  resets reg 2 to 1
+mulr 3 2 4	sets 4 to the mul of 2 reg 2 and reg 3
+eqrr 4 1 4					| 
+addr 4 5 5  Possible exit?	| skips the jump only once reg 4 and reg 1 are equal
+addi 5 1 5  Jumps to ln 9	|
+addr 3 0 0  adds reg 3 to reg 0, stores in reg 0   
+addi 2 1 2	adds 1 to reg 2
+gtrr 2 1 4  sets reg 4 to 1 once 2 manages to be bigger than 1
+addr 5 4 5  Possible exit?	|(skips jump back to start of loop when 2 is bigger than 1)
+seti 2 7 5  Jump to ln 4	|
+addi 3 1 3 increments reg 3 by 1 														|
+gtrr 3 1 4																				|
+addr 4 5 5  causes exit if whatever's in 3 is greater than what's in 1					| Causes program to exit eventually
+seti 1 3 5	jumps to ln 3																|
+mulr 5 5 5  Will be 15 at this point, jumps to 225, thens sets to 226. Ends program		| 
+addi 1 2 1  adds 2 to reg 1 (2 in first run)
+mulr 1 1 1  squares what's in 1 (4)
+mulr 5 1 1  multiplies it by 18
+muli 1 11 1 multiples reg 1 by 11 (198 on first run)
+addi 4 7 4  adds 4 to reg 4
+mulr 4 5 4  muls reg 4 by 21
+addi 4 20 4 adds 20 to reg 4
+addr 1 4 1  stores reg 4 + reg 1 in reg 1
+addr 5 0 5    Possible exit, if 0 contains anything at this point (will contain 1, so skips jump to start)
+seti 0 4 5    Jump to Start
+setr 5 9 4  Sets reg 4 to 26
+mulr 4 5 4  sets reg 4 to 702
+addr 5 4 4  sets reg 4 to 730
+mulr 5 4 4  sets reg 4 to 21170
+muli 4 14 4 sets reg 4 to 296380
+mulr 4 5 4  sets reg 4 to 9187780
+addr 1 4 1  adds whatever's in reg 1 to big reg 4 value, stores in 1 (totals 1819180440 first run)
+seti 0 2 0  resets reg 0 to 0
+seti 0 5 5  jumps to ln 7
+
+55666131769754 (far too high)
+18992555 (too low)
+18992556
+
+1819180440 is too high
+10551411 too low
+
+29544004 not right answer
+
+10551410 in reg 1
+10551411 for exit?
+
+
+sum of all numbers between 2 and 10551410 inc?
+
+
+
+reg 3 counts up, incrementing by 1 each time
+reg 4 has reg 3 added to it each step.
+if 4 matches 1 when it exceeds it (3 was a factor of 1) then it skips, otherweise it adds the value of 3 to 0
+
+
+summary: 0 is the sum of all numbers between 2 and 10551410 that are a factor of 10551410
+10551410 + 2 + 5 + 10 + 1055141 + 2110282 + 5275705
+
+
+not adding factors, adding factors + 1?
+
+
+does 1x1, 1x2, 1x3, ... 1xreg1, then 2x1, 2x2, 2x3, ... 2x(reg1/2), so on, summing all factors it encounters?

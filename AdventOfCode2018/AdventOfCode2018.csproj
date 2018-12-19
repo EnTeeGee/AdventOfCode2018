@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\Dumper.cs" />
+    <Compile Include="Common\ElfLang.cs" />
     <Compile Include="Common\Manager.cs" />
     <Compile Include="Common\Mapper.cs" />
     <Compile Include="Common\SolutionAttribute.cs" />
@@ -67,9 +68,13 @@
     <Compile Include="Solutions\Day16.cs" />
     <Compile Include="Solutions\Day17.cs" />
     <Compile Include="Solutions\Day18.cs" />
+    <Compile Include="Solutions\Day19.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Solutions\Day19.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
